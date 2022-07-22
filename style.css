@@ -1,0 +1,228 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #ccc;
+    height: 100vh;
+}
+
+.container{
+    margin: 50px auto;
+    width: 90%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+header{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px;
+}
+
+/* header > h1{
+    font-weight: 900;
+    font-size: 20px;
+    word-break: break-all;
+} */
+
+header > button {
+    background-color: rgb(57, 57, 226);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px; /* ou 8px */
+    border: none;
+    cursor: pointer;
+}
+
+.dashBoard{
+    padding: 10px;
+    width: auto;
+    overflow: hidden;
+}
+
+.dashBoard::-webkit-scrollbar{
+    width: 12px;
+    background-color: whitesmoke;
+} /* ver dps qvs dessa estilização*/
+
+.dashBoard::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: darkgray; 
+} /* ver dps qvs dessa estilização*/
+
+table{
+    width: 100%;
+    border-spacing: 10px; /* . */
+    word-break: break-all; /* . */
+    border-collapse: collapse; 
+}
+
+thead{
+    background-color: whitesmoke;
+}
+
+tr{
+    border-bottom: 1px solid rgb(238, 235, 235)!important;    
+}
+
+tbody > tr > td{
+    vertical-align: text-top;
+    padding: 6px;
+    max-width: 50px;
+}
+
+thead > tr > th{
+    padding: 5px;
+    text-align: start;
+    margin-bottom: 50px;
+}
+  
+tbody > tr{
+    margin-bottom: 50px;
+}
+
+.action{
+    width: 100px;
+    text-align: center;
+}
+  
+.action{
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    body {
+      font-size: 10px;
+    }
+    
+    header > h1 {
+      font-size: 15px;
+    }
+  
+    header > button {
+      padding: 5px;
+      font-size: 10px;
+    }
+  
+    thead tr th.action {
+      width: auto;
+    }
+    
+    td button i {
+      font-size: 20px;
+    }
+  
+    td button:first-child {
+      margin-right: 0;
+    }
+  
+    .modal {
+      width: 90%;
+    }
+  
+    .modal label {
+      font-size: 12px;
+    }
+  }
+
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+
+.active{
+  display: flex;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.modal label {
+    font-size: 14px;
+    width: 100%;
+}
+  
+.modal input {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px; 
+    width: 100%;
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+}
+  
+.modal button {
+    width: 100%;
+    margin: 10px auto;
+    outline: none;
+    border-radius: 20px; 
+    padding: 5px 10px; 
+    width: 100%;
+    border: none;
+    background-color: rgb(57, 57, 226);
+    color: white;
+}
+
+.active {
+    display: flex;
+}
+  
+.active .modal {
+    animation: modal .4s;
+}
+  
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+  
+td > button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+  
+td > button {
+  font-size: 25px;
+}
+  
+td > button:first-child {
+    /* margin-right: 40px; */
+  margin-left: 40px;
+}
+
+.editimg{
+  width: 30px;
+  height: 30px;
+  
+}
